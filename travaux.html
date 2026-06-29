@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Travaux — projets de recherche en e-santé et sciences humaines" />
+  <title>Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">A.</div>
+  <ul class="nav-links">
+    <li><a href="index.html"      data-fr="Accueil" data-en="Home">Accueil</a></li>
+    <li><a href="travaux.html"    data-fr="Travaux"  data-en="Works">Travaux</a></li>
+    <li><a href="index.html#contact" data-fr="Contact" data-en="Contact">Contact</a></li>
+  </ul>
+  <div class="nav-controls">
+    <button class="ctrl-btn" onclick="toggleLang()" id="lang-btn">EN</button>
+    <button class="ctrl-btn" onclick="toggleDark()" id="dark-btn">☾</button>
+  </div>
+</nav>
+
+<main>
+
+  <header class="works-hero">
+    <h1
+      data-fr="Travaux"
+      data-en="Works">
+      Travaux
+    </h1>
+    <p
+      data-fr="Des sujets différents, une même démarche."
+      data-en="Different subjects, the same approach.">
+      Des sujets différents, une même démarche.
+    </p>
+  </header>
+
+  <section>
+
+    <!--
+      J'ai aussi mobilisé l'IA pour comprendre comment faire apparaître mes trois projets
+      et les refermer (d'où le "onclick")
+    -->
+
+    <div class="card-grid">
+
+      <article id="card-muco" class="card" onclick="toggleProject('muco')" tabindex="0">
+        <span class="card-num">01</span>
+        <img class="card-cover" src="muco.png" alt="Couverture mucoviscidose" />
+        <div class="card-title"
+          data-fr="Mucoviscidose"
+          data-en="Cystic Fibrosis">
+          Mucoviscidose
+        </div>
+        <div class="card-tag"
+          data-fr="Graduate Program · Recherche"
+          data-en="Graduate Program · Research">
+          Graduate Program · Recherche
+        </div>
+      </article>
+
+      <article id="card-endo" class="card" onclick="toggleProject('endo')" tabindex="0">
+        <span class="card-num">02</span>
+        <img class="card-cover" src="endo.png" alt="Couverture endométriose" />
+        <div class="card-title"
+          data-fr="Endométriose"
+          data-en="Endometriosis">
+          Endométriose
+        </div>
+        <div class="card-tag"
+          data-fr="Mémoire · Recherche"
+          data-en="Thesis · Research">
+          Mémoire · Recherche
+        </div>
+      </article>
+
+      <article id="card-ia" class="card" onclick="toggleProject('ia')" tabindex="0">
+        <span class="card-num">03</span>
+        <img class="card-cover" src="analyseGPT.png" alt="Couverture analyse prompts IA" />
+        <div class="card-title"
+          data-fr="Analyse des prompts IA"
+          data-en="AI Prompt Analysis">
+          Analyse des prompts IA
+        </div>
+        <div class="card-tag"
+          data-fr="Recherche · Production de connaissance"
+          data-en="Research · Knowledge production">
+          Recherche · Production de connaissance
+        </div>
+      </article>
+
+    </div>
+
+    <!--
+      J'ai choisi de partir sur une méthode avec des div, des class et des data fr/en
+      car après lecture de plusieurs sources en ligne et selon les conseils des IA,
+      c'était moins complexe que de créer un fichier HTML en français puis un fichier HTML en anglais.
+      Inconvénient principal : chronophage et cela peut vite être difficile à lire
+      mais je n'ai pas trouvé une autre manière d'avoir le résultat qui me satisfait.
+    -->
+
+    <!-- DÉTAIL : MUCOVISCIDOSE -->
+    <div id="detail-muco" class="proj-detail">
+      <div class="proj-detail-inner">
+
+        <div class="proj-detail-left">
+          <p class="label" style="margin-bottom: 11px"
+            data-fr="Graduate Program · Recherche"
+            data-en="Graduate Program · Research">
+            Graduate Program · Recherche
+          </p>
+          <h2
+            data-fr="Mucoviscidose"
+            data-en="Cystic Fibrosis">
+            Mucoviscidose
+          </h2>
+          <button class="close-btn" onclick="closeDetail('muco')"
+            data-fr="Fermer ✕"
+            data-en="Close ✕">
+            Fermer ✕
+          </button>
+        </div>
+
+        <div class="proj-detail-right">
+          <p>« DIRE ET VIVRE LA « RÉVOLUTION KAFTRIO » : ETUDE DES ÉCHANGES ET DES EXPÉRIENCES DANS UN COLLECTIF NUMÉRIQUE DE PATIENTS ATTEINTS DE MUCOVISCIDOSE »</p>
+
+          <p
+            data-fr="Cette recherche vise à mieux comprendre la manière dont le traitement Kaftrio est perçu, discuté et vécu par les personnes concernées, à travers les échanges observés dans le groupe Facebook. Les résultats devraient contribuer à une meilleure compréhension du rôle des espaces numériques de santé dans la construction du savoir profane, du soutien entre pairs et des formes d'expression de la maladie chronique. Ce travail vient également nourrir la réflexion des associations et des professionnels sur les manières d'accompagner les patients dans un contexte où les échanges en ligne occupent une place de plus en plus centrale dans la vie quotidienne et le parcours de soin."
+            data-en="This study aims to better understand how Kaftrio is perceived, discussed, and experienced by those affected, based on the exchanges observed within the Facebook group. The findings are intended to contribute to a deeper understanding of the role of digital health spaces in the construction of lay knowledge, peer support, and the ways chronic illness is expressed. This work also feeds into broader reflections among patient associations and healthcare professionals on how to support patients in a context where online interactions play an increasingly central role in everyday life and care pathways.">
+            Cette recherche vise à mieux comprendre la manière dont le traitement Kaftrio est perçu, discuté et vécu par les personnes concernées, à travers les échanges observés dans le groupe Facebook. Les résultats devraient contribuer à une meilleure compréhension du rôle des espaces numériques de santé dans la construction du savoir profane, du soutien entre pairs et des formes d'expression de la maladie chronique. Ce travail vient également nourrir la réflexion des associations et des professionnels sur les manières d'accompagner les patients dans un contexte où les échanges en ligne occupent une place de plus en plus centrale dans la vie quotidienne et le parcours de soin.
+          </p>
+
+          <p class="proj-quote"
+            data-fr="Au-delà d'un travail académique de recherche, cela a aussi été une opportunité de contribuer à une longue étude qui regroupe plusieurs universités françaises ainsi que deux associations dédiées à la mucoviscidose."
+            data-en="Beyond its academic dimension, this research project was also an opportunity to contribute to a long-term study involving several French universities as well as two associations dedicated to cystic fibrosis.">
+            Au-delà d'un travail académique de recherche, cela a aussi été une opportunité de contribuer à une longue étude qui regroupe plusieurs universités françaises ainsi que deux associations dédiées à la mucoviscidose.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- DÉTAIL : ENDOMÉTRIOSE -->
+    <div id="detail-endo" class="proj-detail">
+      <div class="proj-detail-inner">
+
+        <div class="proj-detail-left">
+          <p class="label" style="margin-bottom: 11px"
+            data-fr="Mémoire · Recherche"
+            data-en="Thesis · Research">
+            Mémoire · Recherche
+          </p>
+          <h2
+            data-fr="Endométriose"
+            data-en="Endometriosis">
+            Endométriose
+          </h2>
+          <button class="close-btn" onclick="closeDetail('endo')"
+            data-fr="Fermer ✕"
+            data-en="Close ✕">
+            Fermer ✕
+          </button>
+        </div>
+
+        <div class="proj-detail-right">
+          <p>«  VIVRE AVEC DE L'ENDOMÉTRIOSE À L'ÈRE DU NUMERIQUE. CONSTRUCTION D'UNE SORORITÉ EN LIGNE ENTRE QUÊTE D'INFORMATION ET SOUTIEN DES PATIENTES FACE À LA MALADIE »</p>
+
+          <p
+            data-fr="Dans cette recherche, il a été question d'explorer un phénomène encore peu étudié dans le champ des sciences sociales : l'émergence d'espaces numériques centrés sur l'endométriose, dans lesquels les patientes prennent une part active à la circulation des savoirs, à l'entraide et à la reconnaissance collective de leur expérience. J'ai cherché à comprendre comment le numérique vient pallier certains manques dans la prise en charge médicale et sociale de cette pathologie. Au fil de cette recherche, il est apparu que le sujet de l'endométriose ne se limite pas à rappeler l'invisibilisation de cette maladie. Il agit également comme un révélateur de tensions sociales, symboliques et institutionnelles autour de la place du corps féminin et de la douleur. Les dispositifs numériques peuvent alors jouer un rôle essentiel dans le « travail émotionnel », dans l'accompagnement par les pairs et dans la construction d'un sentiment de sororité. Ils permettent un espace de soutien mutuel où chaque interaction contribue à reconstruire un sentiment de légitimité. Ainsi, chaque échange participe à la construction de savoirs expérientiels : les trajectoires individuelles finissent par former un repère collectif auquel d'autres peuvent se référer."
+            data-en="This research explored a phenomenon that is still relatively understudied in the field of social sciences: the emergence of digital spaces focused on endometriosis, where patients play an active role in the circulation of knowledge, mutual support, and the collective recognition of their lived experiences. I aimed to understand how digital tools can help address certain gaps in the medical and social care of this condition. Throughout this research, it became clear that endometriosis is not only a matter of highlighting the invisibilization of the disease. It also reveals broader social, symbolic, and institutional tensions surrounding the place of the female body and pain. Digital platforms can therefore play a key role in emotional labour, peer support, and the construction of a sense of sorority. They create spaces of mutual support where each interaction helps rebuild a sense of legitimacy. In this way, each exchange contributes to the production of experiential knowledge: individual trajectories gradually form a collective reference.">
+            Dans cette recherche, il a été question d'explorer un phénomène encore peu étudié dans le champ des sciences sociales : l'émergence d'espaces numériques centrés sur l'endométriose, dans lesquels les patientes prennent une part active à la circulation des savoirs, à l'entraide et à la reconnaissance collective de leur expérience. J'ai cherché à comprendre comment le numérique vient pallier certains manques dans la prise en charge médicale et sociale de cette pathologie. Au fil de cette recherche, il est apparu que le sujet de l'endométriose ne se limite pas à rappeler l'invisibilisation de cette maladie. Il agit également comme un révélateur de tensions sociales, symboliques et institutionnelles autour de la place du corps féminin et de la douleur. Les dispositifs numériques peuvent alors jouer un rôle essentiel dans le « travail émotionnel », dans l'accompagnement par les pairs et dans la construction d'un sentiment de sororité. Ils permettent un espace de soutien mutuel où chaque interaction contribue à reconstruire un sentiment de légitimité. Ainsi, chaque échange participe à la construction de savoirs expérientiels : les trajectoires individuelles finissent par former un repère collectif auquel d'autres peuvent se référer.
+          </p>
+
+          <p class="proj-quote"
+            data-fr="Mon jury de mémoire a été tellement satisfait de ma recherche qu'il m'a suggéré de candidater au Graduate Program DIGIS et m'a soutenue à chaque étape de ma candidature."
+            data-en="My thesis committee was highly satisfied with my research and encouraged me to apply to the DIGIS Graduate Program, supporting me throughout every stage of the application process.">
+            Mon jury de mémoire a été tellement satisfait de ma recherche qu'il m'a suggéré de candidater au Graduate Program DIGIS et m'a soutenue à chaque étape de ma candidature.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- DÉTAIL : ANALYSE IA -->
+    <div id="detail-ia" class="proj-detail">
+      <div class="proj-detail-inner">
+
+        <div class="proj-detail-left">
+          <p class="label" style="margin-bottom: 11px"
+            data-fr="Recherche · Production de connaissance"
+            data-en="Research · Knowledge production">
+            Recherche · Production de connaissance
+          </p>
+          <h2
+            data-fr="Analyse des prompts IA"
+            data-en="AI Prompt Analysis">
+            Analyse des prompts IA
+          </h2>
+          <button class="close-btn" onclick="closeDetail('ia')"
+            data-fr="Fermer ✕"
+            data-en="Close ✕">
+            Fermer ✕
+          </button>
+        </div>
+
+        <div class="proj-detail-right">
+          <p>«  CHATSTS : UN DUO ENTRE L'IA ET L'HUMAIN PLUS PROMPT À EXPLORER LA PRODUCTION DE CONNAISSANCE EN STS ? »</p>
+
+          <p
+            data-fr="Dans ce travail, j'analyse la collaboration entre l'humain et l'intelligence artificielle dans la production de savoirs académiques, plus précisément dans le champ des sciences et techniques (STS). À travers une expérimentation avec ChatGPT, je montre que l'efficacité de cet outil dépend directement de la précision des prompts ainsi que de l'attribution d'un rôle social spécifique à la machine, en l'occurrence celui de sociologue au Centre de Sociologie de l'Innovation (CSI). Ma recherche met toutefois en évidence des limites techniques importantes, notamment les hallucinations factuelles et les bibliographies erronées, qui nécessitent une supervision humaine constante afin de vérifier les informations produites. En mobilisant des concepts issus de la sociologie de la traduction, j'attribue à l'IA un rôle d'acteur au sein d'un « quasi-laboratoire » numérique. Le cœur de cette recherche repose sur une interaction qui illustre une co-évolution sociotechnique : en tant qu'utilisatrice, je m'ajuste à l'algorithme, tandis que celui-ci s'adapte à mes instructions afin de co-construire de la connaissance."
+            data-en="This work analyzes the collaboration between humans and artificial intelligence in the production of academic knowledge, specifically within the field of Science and Technology Studies (STS). Through an experimentation with ChatGPT, I demonstrate that the effectiveness of this tool depends directly on the precision of prompts as well as on assigning a specific social role to the machine in this case, that of a sociologist at the Centre de Sociologie de l'Innovation (CSI). However, my research highlights significant technical limitations, particularly factual hallucinations and inaccurate bibliographies, which require constant human supervision to verify generated information. By drawing on concepts from the sociology of translation, I assign AI the role of an actor within a digital "quasi-laboratory." The core of this research lies in an interaction that illustrates a socio-technical co-evolution: as a user, I adapt to the algorithm, while the system itself adapts to my instructions in order to co-produce knowledge.">
+            Dans ce travail, j'analyse la collaboration entre l'humain et l'intelligence artificielle dans la production de savoirs académiques, plus précisément dans le champ des sciences et techniques (STS). À travers une expérimentation avec ChatGPT, je montre que l'efficacité de cet outil dépend directement de la précision des prompts ainsi que de l'attribution d'un rôle social spécifique à la machine, en l'occurrence celui de sociologue au Centre de Sociologie de l'Innovation (CSI). Ma recherche met toutefois en évidence des limites techniques importantes, notamment les hallucinations factuelles et les bibliographies erronées, qui nécessitent une supervision humaine constante afin de vérifier les informations produites. En mobilisant des concepts issus de la sociologie de la traduction, j'attribue à l'IA un rôle d'acteur au sein d'un « quasi-laboratoire » numérique. Le cœur de cette recherche repose sur une interaction qui illustre une co-évolution sociotechnique : en tant qu'utilisatrice, je m'ajuste à l'algorithme, tandis que celui-ci s'adapte à mes instructions afin de co-construire de la connaissance.
+          </p>
+
+          <p class="proj-quote"
+            data-fr="Il s'agissait de ma première recherche sur un objet numérique, cette recherche a été réalisée en troisième année de licence."
+            data-en="This was my first research project focusing on a digital object, carried out during my third year of Bachelor's degree.">
+            Il s'agissait de ma première recherche sur un objet numérique, cette recherche a été réalisée en troisième année de licence.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+  <span
+    data-fr="Sciences humaines × Numérique × Santé"
+    data-en="Humanities × Digital × Health">
+    Sciences humaines × Numérique × Santé
+  </span>
+  <span>
+    <a href="mentions.html"
+      data-fr="Mentions légales"
+      data-en="Legal notice">
+      Mentions légales
+    </a>
+  </span>
+  <span>2026</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

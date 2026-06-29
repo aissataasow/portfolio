@@ -1,85 +1,275 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio — e-santé et recherche en sciences humaines et sociales" />
+  <title>Portfolio — e-santé & recherche</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<style>
-.sctn-accueil{
-    margin: 20px;
-    border: 2px;
-    padding: 10px;
-    background-color: lightslategrey;
-}
-.title-name{
-    text-align: center;
-}
-.title-portfolio{
-    margin: 20px;
-    border: 2px;
-    padding: 10px;
-}    
-.liste-elmnts-portfolio{
-    padding: 5px;
-}
-.elmnts-1{
-    padding: auto;
-}
-.elmnts-2{
-    padding: auto;
-}
-.elmnts-3{
-    padding: auto;
-}
-</style>    
-<section class="sctn-accueil">
-    <h1 class="title-name">
-        PORTFOLIO D'AISSATA SOW
-    </h1>
-    <img src="photo_pro.jpg" alt="photo professionnelle d'Aissata" width="200" height="200"> 
-    <p class="paragraphe_accueil">
-Actuellement en Master 2 Cultures et Métiers du Web, je développe un profil hybride à l’intersection des sciences humaines et de la gestion de projet web. 
+
+<nav>
+  <div class="nav-logo">A.</div>
+  <ul class="nav-links">
+    <li><a href="index.html"   data-fr="Accueil" data-en="Home">Accueil</a></li>
+    <li><a href="travaux.html" data-fr="Travaux"  data-en="Works">Travaux</a></li>
+    <li><a href="#contact"     data-fr="Contact"  data-en="Contact">Contact</a></li>
+  </ul>
+  <div class="nav-controls">
+    <button class="ctrl-btn" onclick="toggleLang()" id="lang-btn">EN</button>
+    <button class="ctrl-btn" onclick="toggleDark()" id="dark-btn">☾</button>
+  </div>
+</nav>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-left">
+
+      <span class="hero-label"
+        data-fr="Sciences humaines × Numérique × Santé"
+        data-en="Humanities × Digital × Health">
+        Sciences humaines × Numérique × Santé
+      </span>
+
+      <h1
+        data-fr="Naviguer entre e-santé et recherche"
+        data-en="Navigating between e-health and research">
+        Naviguer entre e-santé et recherche
+      </h1>
+
+      <span class="hero-line"
+        data-fr="Observer. Comprendre. Rendre visible."
+        data-en="Observe. Understand. Make visible.">
+        Observer. Comprendre. Rendre visible.
+      </span>
+
+      <p
+        data-fr="Un parcours construit à la croisée des sciences humaines, du numérique et des enjeux de santé. Bienvenue dans mon univers."
+        data-en="A path built at the crossroads of humanities, digital tools, and health issues. Welcome to my world.">
+        Un parcours construit à la croisée des sciences humaines, du numérique et des enjeux de santé. Bienvenue dans mon univers.
+      </p>
+
+    </div>
+    <div class="hero-right">
+      <img class="hero-photo" src="profile-portfolio.png" alt="Portrait" />
+    </div>
+  </section>
+
+  <!--
+    J'ai choisi de partir sur une méthode avec des div, des class et des data fr/en
+    car après lecture de plusieurs sources en ligne et selon les conseils des IA,
+    c'était moins complexe que de créer un fichier HTML en français puis un fichier HTML en anglais.
+    Inconvénient principal : chronophage et cela peut vite être difficile à lire
+    mais je n'ai pas trouvé une autre manière d'avoir le résultat qui me satisfait.
+  -->
+
+  <!-- À PROPOS -->
+  <section class="section-wrap">
+    <div class="two-col">
+
+      <div class="label"
+        data-fr="À propos"
+        data-en="About">
+        À propos
+      </div>
+
+      <div>
+        <h2 class="section-title"
+          data-fr="Une curiosité comme point de départ."
+          data-en="Curiosity as a starting point.">
+          Une curiosité comme point de départ.
+        </h2>
+
+        <p class="section-text"
+          data-fr="J'ai commencé mon parcours par une licence en sciences humaines et sociales avec une spécialisation en numérique. J'ai ensuite poursuivi avec le Master Cultures et Métiers du Web.Ce choix résulte de mon intérêt pour les outils numériques et pour leur capacité à être des vecteurs d'information sous différentes formes : sites web, applications, documentaires interactifs…"
+          data-en="I began my academic journey with a Bachelor's degree in Social Sciences, specializing in digital studies. Then, I continued with Master's degree in web humanities. This choice stemmed from my interest in digital tools and their ability to act as powerful channels of information in various forms: websites, applications, interactive documentaries and more.">
+          J'ai commencé mon parcours par une licence en sciences humaines et sociales avec une spécialisation en numérique. J'ai ensuite poursuivi avec le Master Cultures et Métiers du Web.Ce choix résulte de mon intérêt pour les outils numériques et pour leur capacité à être des vecteurs d'information sous différentes formes : sites web, applications, documentaires interactifs…
+        </p>
+
+        <p class="section-text"
+          data-fr="L'idée de me confronter à des outils et méthodes variés constitue l'un des éléments clés de mon parcours. Je suis convaincue qu'enrichir ses connaissances sur différents supports permet également d'augmenter sa capacité à répondre à des problématiques, surtout dans un contexte où le numérique occupe une place de plus en plus importante dans notre quotidien."
+          data-en="Engaging with different tools and methodologies has been a key element of my path. I am convinced that broadening knowledge across different mediums also strengthens the ability to address complex problems, especially in a context where digital technologies play an increasingly important role in our daily lives.">
+          L'idée de me confronter à des outils et méthodes variés constitue l'un des éléments clés de mon parcours. Je suis convaincue qu'enrichir ses connaissances sur différents supports permet également d'augmenter sa capacité à répondre à des problématiques, surtout dans un contexte où le numérique occupe une place de plus en plus importante dans notre quotidien.
+        </p>
+
+        <div class="tags">
+          <span class="tag" data-fr="Recherche SHS" data-en="Research">Recherche SHS</span>
+          <span class="tag" data-fr="E-santé"       data-en="E-health">E-santé</span>
+          <span class="tag" data-fr="Numérique"     data-en="Digital">Numérique</span>
+          <span class="tag" data-fr="Web"           data-en="Web">Web</span>
+          <span class="tag" data-fr="Curiosité"     data-en="Curiosity">Curiosité</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TEASER TRAVAUX -->
+  <section class="section-wrap">
+
+    <div class="teaser-header">
+      <p
+        data-fr="Et si on passait en revue mes différentes réalisations ?"
+        data-en="Shall we take a look at my different works?">
+        Et si on passait en revue mes différentes réalisations ?
+      </p>
+      <a href="travaux.html"
+        data-fr="Découvrir mes travaux →"
+        data-en="See all works →">
+        Découvrir mes travaux →
+      </a>
+    </div>
+
+    <div class="card-grid">
+
+      <a class="card" href="travaux.html">
+        <span class="card-num">01</span>
+        <img class="card-cover" src="muco.png" alt="" />
+        <div class="card-title"
+          data-fr="Mucoviscidose"
+          data-en="Cystic Fibrosis">
+          Mucoviscidose
+        </div>
+        <div class="card-tag"
+          data-fr="Graduate Program · Recherche"
+          data-en="Graduate Program · Research">
+          Graduate Program · Recherche
+        </div>
+      </a>
+
+      <a class="card" href="travaux.html">
+        <span class="card-num">02</span>
+        <img class="card-cover" src="endo.png" alt="" />
+        <div class="card-title"
+          data-fr="Endométriose"
+          data-en="Endometriosis">
+          Endométriose
+        </div>
+        <div class="card-tag"
+          data-fr="Mémoire · Recherche"
+          data-en="Thesis · Research">
+          Mémoire · Recherche
+        </div>
+      </a>
+
+      <a class="card" href="travaux.html">
+        <span class="card-num">03</span>
+        <img class="card-cover" src="analyseGPT.png" alt="" />
+        <div class="card-title"
+          data-fr="Analyse des prompts IA"
+          data-en="AI Prompt Analysis">
+          Analyse des prompts IA
+        </div>
+        <div class="card-tag"
+          data-fr="Recherche · Production de connaissance"
+          data-en="Research · Knowledge production">
+          Recherche · Production de connaissance
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ENGAGEMENT -->
+  <section class="section-wrap">
+    <div class="two-col">
+
+      <div class="label"
+        data-fr="Engagement"
+        data-en="Commitment">
+        Engagement
+      </div>
+
+      <div>
+        <h2 class="section-title"
+          data-fr="Agir au-delà des projets."
+          data-en="Acting beyond projects.">
+          Agir au-delà des projets.
+        </h2>
+
+        <p class="section-text"
+          data-fr="Depuis près de quatre ans, je suis engagée au sein de l'association Excision Parlons-en ! en tant que secrétaire et ambassadrice. Cet engagement m'a appris que communiquer, c'est aussi écouter, accompagner et créer des espaces de dialogue autour de sujets parfois sensibles. Ayant pour ambition de réaliser et de participer à des projets s'inscrivant dans le domaine de la FemTech, j'ai choisi de m'exercer (pendant et en dehors de mes études) à l'analyse de différents sujets qui couvrent les domaines de la santé, du plaidoyer et de la justice sociale."
+          data-en="For nearly four years, I have been involved with the association Excision, Let's Talk About It! as secretary and ambassador. This commitment taught me that communicating also means listening, supporting, and creating spaces for dialogue around sometimes sensitive subjects. With the ambition of contributing to projects within the FemTech field, I chose to actively engage (both during and alongside my studies) in analyzing topics across health, advocacy and social justice.">
+          Depuis près de quatre ans, je suis engagée au sein de l'association Excision Parlons-en ! en tant que secrétaire et ambassadrice. Cet engagement m'a appris que communiquer, c'est aussi écouter, accompagner et créer des espaces de dialogue autour de sujets parfois sensibles. Ayant pour ambition de réaliser et de participer à des projets s'inscrivant dans le domaine de la FemTech, j'ai choisi de m'exercer (pendant et en dehors de mes études) à l'analyse de différents sujets qui couvrent les domaines de la santé, du plaidoyer et de la justice sociale.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EN DEHORS DU TRAVAIL ACADÉMIQUE -->
+  <section class="section-wrap">
+    <div class="two-col">
+
+      <div class="label"
+        data-fr="En dehors du travail académique..."
+        data-en="Outside of academic work...">
+        En dehors du travail académique..
+      </div>
+
+      <div>
+        <h2 class="section-title"
+          data-fr="Une collection de quelques réalisations au fil du temps"
+          data-en="A collection of works over time">
+          Une collection de quelques réalisations au fil du temps
+        </h2>
+
+        <p class="section-text"
+          data-fr="J'ai présenté des photographies dans le cadre d'un atelier photographique de Master 1. Elles proviennent de l'ancien appareil photo de ma grande sœur que j'utilisais souvent lorsque j'étais enfant. Ces images datent d'environ 2012 : j'avais alors dix ans. En parallèle, j'ai souhaité intégrer à cette collection mon dessin préféré : un portrait réalisé en 2025 selon la technique du stippling. Pourquoi réunir des productions séparées par autant d'années ? Leur point commun est la patience. Ces photographies prises à 10 ans (j'en ai 23 aujourd'hui) sont une manière de montrer qu'un regard ancien peut encore être travaillé et réinterprété. Le dessin de 2025 repose lui sur une autre forme de patience : la méthode du stippling qui fait apparaître le portrait point par point. Dans les deux cas, il s'agit de faire émerger une forme progressivement, comme dans la recherche académique, où l'on s'appuie sur des travaux antérieurs et où l'écriture se construit mot après mot."
+          data-en="I presented a series of photographs during a photography class in the first-year of my Master. They were taken with an old camera that belonged to my older sister, which I often used as a child. These images date back to around 2012: I was ten years old at the time. Alongside this work, I also chose to include my favourite drawing in my collection: a portrait created in 2025 using the stippling technique. Why bring together works separated by so many years? They share a common thread: patience. These photographs taken at the age of 10 (I am now 23) show that a previous work can still be revisited et reworked. The 2025 drawing, on the other hand, relies on a different form of patience: the stippling method which gradually reveals the portrait dot by dot. In both cases, a form emerges progressively, much like academic research, which builds on previous works and develops word by word.">
+          J'ai présenté des photographies dans le cadre d'un atelier photographique de Master 1. Elles proviennent de l'ancien appareil photo de ma grande sœur que j'utilisais souvent lorsque j'étais enfant. Ces images datent d'environ 2012 : j'avais alors dix ans. En parallèle, j'ai souhaité intégrer à cette collection mon dessin préféré : un portrait réalisé en 2025 selon la technique du stippling. Pourquoi réunir des productions séparées par autant d'années ? Leur point commun est la patience. Ces photographies prises à 10 ans (j'en ai 23 aujourd'hui) sont une manière de montrer qu'un ancien travail peut encore être travaillé et réinterprété. Le dessin de 2025 repose lui sur une autre forme de patience : la méthode du stippling qui fait apparaître le portrait point par point. Dans les deux cas, il s'agit de faire émerger une forme progressivement, comme dans la recherche académique, où l'on s'appuie sur des travaux antérieurs et où l'écriture se construit mot après mot.
+        </p>
+
+        <video controls width="50%">
+          <source src="collection.mp4" type="video/mp4">
+        </video>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section-wrap contact-wrap" id="contact">
+
+    <h2
+      data-fr="Une idée ? Parlons-en."
+      data-en="An idea? Let's talk.">
+      Une idée ? Parlons-en.
+    </h2>
+
+    <p
+      data-fr="Les meilleures conversations commencent souvent par une simple curiosité."
+      data-en="The best conversations often start with simple curiosity.">
+      Les meilleures conversations commencent souvent par une simple curiosité.
     </p>
-</section>  
-<section class="title-portfolio">
-<h1>MES REALISATIONS</h1>
-</section>
-<section class="liste-elmnts-portfolio">
-<div class="elmnts-1">
-<h1>
-TITRE ELEMENT 1 DU PORTFOLIO
-</h1>
-<h2>
-    Sous titre de l'element 
-</h2>
-<p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-</p>    
-</div class="elmnts-2">    
-<div>
-<h1>
-    TITRE ELEMENT 2 DU PORTFOLIO
-</h1>
-<h2>
-    Sous titre de l'element 
-</h2>
-<p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-</p>
-</div>
-<div class="elmnts-3">
-<h1>
-    TITRE ELEMENT 3 DU PORTFOLIO
-</h1>
-<h2>
-    Sous titre de l'element 
-</h2>
-<p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-</p>
-</div>
-</section>   
+
+    <a class="contact-link" href="mailto:mails.aissatasow+portfolio@email.com">Discutons par mail !</a>
+
+  </section>
+
+</main>
+
+<footer>
+  <span
+    data-fr="Sciences humaines × Numérique × Santé"
+    data-en="Humanities × Digital × Health">
+    Sciences humaines × Numérique × Santé
+  </span>
+  <span>
+    <a href="mentions.html"
+      data-fr="Mentions légales"
+      data-en="Legal notice">
+      Mentions légales
+    </a>
+  </span>
+  <span>2026</span>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
